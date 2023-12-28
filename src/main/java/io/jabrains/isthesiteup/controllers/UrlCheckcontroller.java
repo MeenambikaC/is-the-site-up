@@ -27,7 +27,8 @@ public class UrlCheckcontroller {
             connection.setRequestMethod("GET");
             connection.connect();
             int responseCode=connection.getResponseCode()/100;
-            if (responseCode!=3 || responseCode!=2) {
+            // returnMessage=SITE_UP;
+            if (responseCode!=3 && responseCode!=2) {
                 returnMessage=SITE_DOWN;
                 
             }
